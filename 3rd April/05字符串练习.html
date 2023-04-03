@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //输入HelloMyWorld
+        //换成Hello my world
+        var str='HelloMyWorld';
+        //转换成数组，因为字符串本身没法改变
+        var arr=str.split('');
+        //边历数组，拿到每个字符
+        for(var i=1;i<arr.length;i++){
+            //判断大小写
+            if(arr[i]>='A'&& arr[i]<='Z'){
+                arr[i]=' '+arr[i].toLocaleLowerCase();
+            }
+        }
+        //转换成字符串
+        var newStr=arr.join('');
+        console.log(newStr);
+    </script>
+</body>
+</html>

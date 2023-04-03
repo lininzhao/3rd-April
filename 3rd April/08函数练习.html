@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定义函数判断一个数是不是完数:如6=1+2+3；
+        
+        function f(num){
+            var sum=0;
+            //拿到这个数的因子数（不含本身)
+            for(var i=1;i<num;i++){
+                if(num%i==0){
+                    sum+=i;
+                }
+            }
+            //判断sum与num是否相等
+            if(sum==num){
+                console.log(num+'yes 是完数');
+            }else{
+                console.log(`${num} 不是完数`);
+            }
+        }
+        f(6);
+
+    </script>
+</body>
+</html>

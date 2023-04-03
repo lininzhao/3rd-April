@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //将下列字符串求最大最小值，平均值，总和，排序
+        var str='12$14$50$27$32$46$19$8$21';
+        var arr=str.split('$');
+        // console.log(arr);
+        //转化为数字类型
+        for(var i=0;i<arr.length;i++){
+            arr[i]=parseInt(arr[i]);
+        }
+        console.log(arr);
+        //求最值，和，平均值
+        var max=arr[0];
+        var min=arr[0];
+        var count=0;
+        var sum=0;
+        var ave;
+        for(var j=0;j<arr.length;j++){
+            if(max<arr[j]){
+                max=arr[j];
+            }
+            if(min>arr[j]){
+                min=arr[j];
+            }
+            count++;
+            sum+=arr[j];
+        }
+        ave=sum/count;
+        console.log(`最大值为${max},最小值为${min},和为${sum},平均值为${ave.toFixed(2)}`);
+        //排序
+       arr.sort( function ranks(a,b){
+            return a-b;
+        });
+        console.log(arr);
+    </script>
+</body>
+</html>

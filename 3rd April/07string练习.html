@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //判断上传文件类型必须为'html,css,js,jpg'
+        var file=prompt('请输入文件');
+        var index=file.lastIndexOf('.')+1;
+        var type=file.substring(index);
+        console.log(type);
+        if(type=='html'||type=='css'||type=='js'||type=='jpg'){
+            alert('文件上传成功');
+        }else{
+            alert('请输入正确的文件类型');
+        }
+    </script>
+</body>
+</html>
